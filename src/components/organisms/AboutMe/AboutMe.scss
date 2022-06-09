@@ -1,0 +1,26 @@
+@import '../../../styles/app.scss';
+
+.AboutMe {
+  background-color: $background-color-secondary;
+  padding: $padding-y $padding-x;
+
+  @include laptop {
+    padding: $padding-y-laptop $padding-x-laptop;
+  }
+
+  &__text {
+    margin: 20px auto 0;
+    color: darken($color-white, 7%);
+    font-size: 1rem;
+    line-height: 1.4rem;
+    text-align: center;
+    max-width:  75ch;
+    
+    @include laptop {
+      margin-top: 40px;
+      color: darken($color-white, 8%);
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+    }
+  }
+}

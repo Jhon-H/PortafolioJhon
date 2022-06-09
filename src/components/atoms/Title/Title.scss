@@ -1,0 +1,12 @@
+@import '../../../styles/app.scss';
+
+.Title {
+  font-size: $subtitle-size;
+  text-align: center;
+  color: $color-main;
+  margin-bottom: 5px;
+
+  @include laptop {
+    font-size: $subtitle-size-laptop;
+  }
+}
