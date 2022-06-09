@@ -1,0 +1,42 @@
+@import '../../../styles/app.scss';
+
+.SkillBar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  width: max(75%, 290px);
+  height: 40px;
+  
+  border-radius: 6px;
+  background-color: #302752;
+  border: 1px solid , #8f9cbe;
+  
+  @include laptop {
+    height: 50px;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    z-index: 2;
+    color: $color-white;
+  }
+  
+  &__level {
+    content: '';
+    position: absolute;
+    background: repeating-linear-gradient(
+      45deg,
+      lighten($background-color-secondary, 10%),
+      lighten($background-color-secondary, 10%) 10px,
+      $background-color-secondary 10px,
+      $background-color-secondary 20px
+    );
+    left: 0;
+    z-index: 1;
+    display: block;
+    height: 100%;
+  }
+}

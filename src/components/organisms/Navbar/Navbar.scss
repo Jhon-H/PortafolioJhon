@@ -1,0 +1,117 @@
+@import '../../../styles/app.scss';
+
+.Navigation {
+  background-color: $background-color-main;
+  position: relative;
+
+  &__button {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: none;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.5rem;
+    color: $color-main;
+
+    &--close {
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    img {
+      width: 19px;
+      height: 19px;
+    }
+  }
+  
+}
+
+.Navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  overflow: hidden;
+  
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: min(55%, 250px);
+
+  background-color: darken($background-color-secondary, 30%);
+  color: $color-white;
+
+  animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: .5s; /* don't forget to set a duration! */
+  animation-delay: 0s;
+  
+  &--close {
+    display: none;
+  }
+
+  &__btn-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: none;
+    color: $color-white;
+    font-size: 1.1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__top {
+    margin-top: 90px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__sections {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    li {
+      a {
+        color: $color-white;
+        font-size: 1.1rem;
+        text-decoration: none;
+      }
+    }
+
+  }
+
+  &__social {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+
+    &__item {
+      width: 35px;
+      height: 35px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+

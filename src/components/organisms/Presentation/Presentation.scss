@@ -1,0 +1,53 @@
+@import '../../../styles/app.scss';
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: max(65vh, 550px);
+  height: fit-content;
+  background-color: $background-color-main;
+  padding: 0 $padding-x;
+  font-family: 'Patrick Hand', cursive;  
+  
+  @include laptop {
+    padding: padd $padding-x-laptop;
+  }
+
+  &__title {
+    margin-top: 30px;
+    font-size: 2.4rem;
+    text-align: center;
+    color: $color-main;
+    margin-bottom: 5px;
+
+    @include laptop {
+      font-size: 3.3rem;
+    }
+  }
+  
+  &__description {
+    font-size: 1.4rem;
+    text-align: center;
+    color: $color-gray;
+    margin-bottom: 30px;
+    
+    @include laptop {
+      margin-bottom: 50px;
+      font-size: 2.1rem;
+    }
+  }
+  
+  &__photo {
+    display: block;
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    
+    @include laptop {
+      width: 260px;
+      height: 260px;
+    }
+  }
+}
